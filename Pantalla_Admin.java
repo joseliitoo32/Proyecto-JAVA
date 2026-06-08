@@ -14,22 +14,22 @@ public class Pantalla_Admin extends JFrame {
     public Pantalla_Admin() {
         setTitle("FitTrack - Panel de Administración");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setExtendedState(JFrame.MAXIMIZED_BOTH); // Pantalla completa
+        setExtendedState(JFrame.MAXIMIZED_BOTH); // Maximizado completo
 
         setLayout(new BorderLayout());
         getContentPane().setBackground(new Color(245, 246, 250));
 
-        // Cabecera de Administración
+        // Cabecera
         JPanel panelTop = new JPanel();
         panelTop.setBackground(new Color(45, 52, 54));
         panelTop.setBorder(BorderFactory.createEmptyBorder(15, 10, 15, 10));
-        JLabel lblTitulo = new JLabel("👑 PANEL DE GESTIÓN ADMINISTRATIVA (SELECT ALL)");
+        JLabel lblTitulo = new JLabel("👑 PANEL DE GESTIÓN DE USUARIOS (VISTA SELECT)");
         lblTitulo.setFont(new Font("Arial", Font.BOLD, 22));
         lblTitulo.setForeground(Color.WHITE);
         panelTop.add(lblTitulo);
         add(panelTop, BorderLayout.NORTH);
 
-        // Estructura de la Tabla de Datos de Usuarios
+        // Estructura de la Tabla de Datos
         String[] columnas = {"ID", "Nombre", "Apellidos", "Edad", "Estatura (m)", "Rol"};
         modeloTabla = new DefaultTableModel(columnas, 0);
         tablaUsuarios = new JTable(modeloTabla);
@@ -44,22 +44,22 @@ public class Pantalla_Admin extends JFrame {
         JPanel panelBottom = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 15));
         panelBottom.setBackground(Color.WHITE);
 
-        btnActualizar = new JButton("Actualizar Lista (Select)");
+        btnActualizar = new JButton("Actualizar Lista");
         btnCerrarSesion = new JButton("Cerrar Sesión");
 
         panelBottom.add(btnActualizar);
         panelBottom.add(btnCerrarSesion);
         add(panelBottom, BorderLayout.SOUTH);
 
-        // Cargar los registros en la tabla inmediatamente al instanciar la vista
+        // Cargar usuarios al abrir
         cargarDatosUsuarios();
 
-        // Lógica de actualizar tabla bajo demanda
+        // Lógica de actualizar
         btnActualizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 cargarDatosUsuarios();
-                JOptionPane.showMessageDialog(Pantalla_Admin.this, "Datos de usuarios actualizados correctamente.");
+                JOptionPane.showMessageDialog(Pantalla_Admin.this, "Lista de usuarios actualizada.");
             }
         });
 
@@ -68,16 +68,14 @@ public class Pantalla_Admin extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Pantalla_Inicio login = new Pantalla_Inicio();
-                login.setExtendedState(JFrame.MAXIMIZED_BOTH);
                 login.setVisible(true);
                 dispose();
             }
         });
     }
 
-    // Ejecuta la consulta de selección del DAO y la plasma en el componente visual
     private void cargarDatosUsuarios() {
-        modeloTabla.setRowCount(0); // Limpiar filas anteriores de la tabla
+        modeloTabla.setRowCount(0);
         UsuarioDAO dao = new UsuarioDAO();
         List<Usuario> usuarios = dao.obtenerTodosUsuarios();
 
