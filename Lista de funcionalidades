@@ -1,0 +1,70 @@
+# ⚙️ Lista de funcionalidades - FitTrack
+
+## 📌 Funcionalidades principales de la aplicación
+
+A continuación se detallan las funciones que tendrá la aplicación FitTrack.
+
+---
+
+## 🔐 1. Sistema de usuarios
+- Permite el registro de nuevos usuarios
+- Permite iniciar sesión con un usuario ya creado
+- Guarda los datos del usuario en el sistema
+- Diferencia entre usuario normal y administrador
+
+---
+
+## 📝 2. Registro de usuarios
+- Crear una nueva cuenta introduciendo datos personales
+- Evitar usuarios duplicados
+- Guardar la información en la base de datos
+
+---
+
+## 🔑 3. Inicio de sesión
+- Validar usuario y contraseña
+- Permitir el acceso solo si los datos son correctos
+- Mostrar la pantalla principal después del login
+
+---
+
+## 🏠 4. Selección de grupos musculares
+- Mostrar diferentes grupos musculares
+- Permitir seleccionar un músculo concreto
+- Acceder a los ejercicios asociados a ese músculo
+
+---
+
+## 💪 5. Gestión de ejercicios
+- Mostrar ejercicios según el músculo seleccionado
+- Permitir ver la información de cada ejercicio
+- Añadir ejercicios a un entrenamiento
+
+---
+
+## 🏋️ 6. Sistema de entrenamiento
+- Crear una lista de ejercicios seleccionados
+- Iniciar un entrenamiento con los ejercicios elegidos
+- Eliminar ejercicios del entrenamiento
+- Finalizar el entrenamiento
+
+---
+
+## 👑 7. Panel de administrador
+- Ver todos los usuarios registrados
+- Consultar los datos de los usuarios
+- Eliminar usuarios si es necesario
+
+---
+
+## 💾 8. Gestión de datos
+- Guardar la información de usuarios
+- Recuperar datos desde la base de datos
+- Mantener la información disponible aunque se cierre la aplicación
+
+---
+
+## 🔄 9. Navegación entre pantallas
+- Permitir moverse entre las diferentes pantallas
+- Volver a pantallas anteriores
+- Cerrar sesión correctamente
