@@ -1,7 +1,3 @@
--- Crear usuario root
-CREATE OR REPLACE USER admin@localhost IDENTIFIED BY 'admin';
-GRANT ALL PRIVILEGES ON  *.* to 'admin'@'localhost';
-
 -- CREACIÓN DE BASE DE DATOS
 drop database if exists fittrack;
 CREATE DATABASE IF NOT EXISTS fittrack;
