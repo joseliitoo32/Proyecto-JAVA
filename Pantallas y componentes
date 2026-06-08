@@ -1,0 +1,89 @@
+# 🖥️ Pantallas y componentes - FitTrack
+
+## 📌 Pantallas de la aplicación
+
+A continuación se describen las pantallas que tendrá la aplicación y los elementos principales de cada una.
+
+---
+
+## 🔐 1. Pantalla de inicio de sesión
+Pantalla donde el usuario accede a la aplicación.
+
+### Componentes:
+- Título de bienvenida
+- Campo para introducir el nombre de usuario o correo
+- Campo para introducir la contraseña
+- Botón para iniciar sesión
+- Botón para ir al registro de usuario
+
+---
+
+## 📝 2. Pantalla de registro
+Pantalla donde se crean nuevos usuarios.
+
+### Componentes:
+- Título de registro
+- Campos para introducir:
+  - Nombre
+  - Apellidos
+  - Edad
+  - Estatura
+  - Contraseña
+- Botón para guardar el usuario
+- Botón para volver a la pantalla anterior
+
+---
+
+## 🏠 3. Pantalla principal (selección de músculos)
+Pantalla donde el usuario elige el grupo muscular que quiere entrenar.
+
+### Componentes:
+- Título con instrucción (ej: “Elige un músculo”)
+- Botones para seleccionar:
+  - Pecho
+  - Espalda
+  - Piernas
+  - Brazos
+  - Abdomen
+- Botón para cerrar sesión
+
+---
+
+## 💪 4. Pantalla de ejercicios
+Pantalla donde se muestran los ejercicios del músculo seleccionado.
+
+### Componentes:
+- Título con el nombre del músculo seleccionado
+- Lista de ejercicios disponibles
+- Botón para añadir ejercicios al entrenamiento
+- Botón para volver atrás
+
+---
+
+## 🏋️ 5. Pantalla de entrenamiento
+Pantalla donde el usuario ve su entrenamiento actual.
+
+### Componentes:
+- Título “Tu entrenamiento”
+- Lista de ejercicios seleccionados
+- Botón para iniciar el entrenamiento
+- Botón para eliminar ejercicios
+- Botón para finalizar el entrenamiento
+
+---
+
+## 👑 6. Pantalla de administrador
+Pantalla solo accesible por el usuario administrador.
+
+### Componentes:
+- Título del panel de administración
+- Tabla con la lista de usuarios registrados
+- Botón para actualizar la lista
+- Botón para eliminar usuarios
+- Botón para cerrar sesión
+
+---
+
+## ⚙️ Notas generales
+- La aplicación tendrá navegación entre pantallas mediante botones.
+- Toda la información se gestionará desde una base de datos.
